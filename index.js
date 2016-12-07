@@ -11,15 +11,25 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+var S3Adapter = require('parse-server-s3-adapter');
+
+var s3Options = new S3Adapter(
+  process.env.S3_ACCESS_KEY
+  process.env.S3_SECRET_KEY
+  process.env.S3_BUCKET
+  {"region": process.env.S3_REGION, // default value
+  "directAccess": true // Setting this to true allows direct downloads
+  }
+);
+
+
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
-  liveQuery: {
-    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-  }
+  filesAdapter: s3Options,
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
