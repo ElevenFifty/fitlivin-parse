@@ -14,9 +14,9 @@ if (!databaseUri) {
 var S3Adapter = require('parse-server-s3-adapter');
 
 var s3Options = new S3Adapter(
-  process.env.S3_ACCESS_KEY
-  process.env.S3_SECRET_KEY
-  process.env.S3_BUCKET
+  process.env.S3_ACCESS_KEY,
+  process.env.S3_SECRET_KEY,
+  process.env.S3_BUCKET,
   {"region": process.env.S3_REGION, // default value
   "directAccess": true // Setting this to true allows direct downloads
   }
