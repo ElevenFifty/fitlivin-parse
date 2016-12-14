@@ -31,6 +31,14 @@ var api = new ParseServer({
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   filesAdapter: s3Options,
   fileKey: process.env.FILE_KEY,
+  push: {
+      ios: [
+      {
+        pfx:'FitProdPush.p12',
+        bundleId: 'com.ilikey.aloha',
+        production: true
+      }
+    ]},
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
