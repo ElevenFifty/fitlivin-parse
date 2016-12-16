@@ -32,6 +32,10 @@ var api = new ParseServer({
   filesAdapter: s3Options,
   fileKey: process.env.FILE_KEY,
   push: {
+    android: {
+      senderId: '768643532104',
+      apiKey: 'AIzaSyCiTVuZ2r98EwVC-DkiXsRD-Sgkpr_lxWs'
+    },
       ios: [
       {
         pfx:'FitProdPush.p12',
