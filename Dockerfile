@@ -17,6 +17,9 @@ ENV S3_REGION setYourS3Region
 
 ENV FILE_KEY setYourFileKey
 
+ENV TWITTER_CONSUMER_KEY setYourTwitterConsumerKey
+ENV TWITTER_CONSUMER_SECRET setYourConsumerSecret
+
 # Optional (default : 'parse/cloud/main.js')
 # ENV CLOUD_CODE_MAIN cloudCodePath
 
