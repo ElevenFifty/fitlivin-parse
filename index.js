@@ -33,8 +33,8 @@ var api = new ParseServer({
   fileKey: process.env.FILE_KEY,
   push: {
     android: {
-      senderId: '768643532104',
-      apiKey: 'AIzaSyCiTVuZ2r98EwVC-DkiXsRD-Sgkpr_lxWs'
+      senderId: ANDROID_PUSH_SENDER_ID || '',
+      apiKey: ANDROID_PUSH_API_KEY || ''
     },
       ios: [
       {
@@ -49,6 +49,16 @@ var api = new ParseServer({
      consumer_secret: process.env.TWITTER_CONSUMER_SECRET || ''
    }
   },
+  emailAdapter: {
+    module: 'parse-server-simple-mailgun-adapter',
+    options: {
+      // The address that your emails come from
+      fromAddress: process.env.MG_FROM_ADDRESS || 'support@elevenfiftyconsulting.com',
+      // Your domain from mailgun.com
+      domain: process.env.MG_DOMAIN || 'mg.elevenfiftyconsulting.com',
+      // Your API key from mailgun.com
+      apiKey: process.env.MG_API_KEY || '',
+    },
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:

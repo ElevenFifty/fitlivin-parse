@@ -20,6 +20,13 @@ ENV FILE_KEY setYourFileKey
 ENV TWITTER_CONSUMER_KEY setYourTwitterConsumerKey
 ENV TWITTER_CONSUMER_SECRET setYourConsumerSecret
 
+ENV ANDROID_PUSH_SENDER_ID setYourAndroidSenderId
+ENV ANDROID_PUSH_API_KEY setYourAndroidPushAPIKey
+
+ENV MG_FROM_ADDRESS setMailGunFromAddress
+ENV MG_DOMAIN setMailGunDomain
+ENV MG_API_KEY setMailGunApiKey
+
 # Optional (default : 'parse/cloud/main.js')
 # ENV CLOUD_CODE_MAIN cloudCodePath
 
