@@ -33,8 +33,8 @@ var api = new ParseServer({
   fileKey: process.env.FILE_KEY,
   push: {
     android: {
-      senderId: ANDROID_PUSH_SENDER_ID || '',
-      apiKey: ANDROID_PUSH_API_KEY || ''
+      senderId: process.env.ANDROID_PUSH_SENDER_ID || '',
+      apiKey: process.env.ANDROID_PUSH_API_KEY || ''
     },
       ios: [
       {
