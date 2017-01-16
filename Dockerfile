@@ -7,6 +7,7 @@ WORKDIR /parse
 RUN npm install
 
 ENV APP_ID setYourAppId
+ENV APP_NAME setYourAppName
 ENV MASTER_KEY setYourMasterKey
 ENV DATABASE_URI setMongoDBURI
 
