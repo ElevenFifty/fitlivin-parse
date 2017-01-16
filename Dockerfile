@@ -10,6 +10,7 @@ ENV APP_ID setYourAppId
 ENV APP_NAME setYourAppName
 ENV MASTER_KEY setYourMasterKey
 ENV DATABASE_URI setMongoDBURI
+ENV PUBLIC_SERVER_URL setPublicServerURL
 
 ENV S3_ACCESS_KEY setYourS3AccessKey
 ENV S3_SECRET_KEY setYourS3SecretKey
