@@ -43,6 +43,11 @@ var api = new ParseServer({
         pfx:'FitProdPush.p12',
         bundleId: 'com.FitLivinLLC.FitLivin',
         production: true
+      },
+      {
+        pfx:'FitLivinDev.p12',
+        bundleId: 'com.FitLivinLLC.FitLivin',
+        production: false
       }
     ]},
   auth: {
