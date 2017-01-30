@@ -41,7 +41,7 @@ var api = new ParseServer({
       ios: [
       {
         pfx:'FitProdPush.p12',
-        bundleId: 'com.ilikey.aloha',
+        bundleId: 'com.FitLivinLLC.FitLivin',
         production: true
       }
     ]},
