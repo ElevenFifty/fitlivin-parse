@@ -12,7 +12,11 @@ Parse.Cloud.define('sendPush', function(request, response) {
     aps: {
       alert: request.params.title,
       badge:1
-    }
+    },
+    alert    : request.params.title,
+    category : request.params.categoryString || '',
+    objectId : request.params.objectId || '',
+    badge    : "Increment"
   };
 
   Parse.Push.send(
