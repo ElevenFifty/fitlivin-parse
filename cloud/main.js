@@ -38,7 +38,7 @@ Parse.Cloud.define('markAllRead', function(request,response) {
   var theUser = request.user;
   var batchUpdate = [];
 
-  var noteQuery = new Parse.Query("Notification");
+  var query = new Parse.Query("Notification");
   query.equalTo("user", theUser);
   query.notEqualTo("read", true);
   query.limit(1000);
