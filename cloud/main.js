@@ -54,11 +54,13 @@ Parse.Cloud.define('markAllRead', function(request,response) {
       Parse.Object.saveAll(batchUpdate).then(
         function(list) {
 			      // All the objects were saved.
-						console.log("all notes marked read");
+						// console.log("all notes marked read");
+            response.success();
 			    },
 			    function(error) {
 			      // An error occurred while saving one of the objects.
 						console.log(error);
+            response.error(error);
 			    }
 				);
     }
