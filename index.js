@@ -40,13 +40,13 @@ var api = new ParseServer({
     },
       ios: [
       {
-        pfx:'FitProdPush.p12',
-        bundleId: 'com.FitLivinLLC.FitLivin',
+        pfx:'FourCountyProd.p12',
+        bundleId: 'com.FitLivinLLC.FourCounty',
         production: true
       },
       {
-        pfx:'FitLivinDev.p12',
-        bundleId: 'com.FitLivinLLC.FitLivin',
+        pfx:'FourCountyDev.p12',
+        bundleId: 'com.FitLivinLLC.FourCounty',
         production: false
       }
     ]},
